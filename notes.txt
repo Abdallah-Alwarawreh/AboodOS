@@ -1,7 +1,3 @@
-add-symbol-file ./build/completeKernel.o 0x100000
-break kernel_main
-target remote | qemu-system-x86_64 -hda ./bin/os.bin -gdb stdio -S
-
 #/bin/bash
 export PREFIX="$HOME/opt/cross"
 export TARGET=i686-elf
