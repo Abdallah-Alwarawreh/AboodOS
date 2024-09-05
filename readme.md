@@ -34,4 +34,7 @@ To build the operating system, simply run:
 - [ ] Get Input from Mouse
 - [ ] Create a Shell
 - [ ] Simple snake game
+- [ ] Storage
+- [ ] Abood file system
+- [ ] Abood file format
 - [ ] Simple text editor
