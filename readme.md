@@ -5,7 +5,7 @@
 ## Features
 
 - Basic Bootloader
-- Kernel written in C and Assembly
+- Kernel written in C
 
 ## Getting Started
 
