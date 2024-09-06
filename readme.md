@@ -30,7 +30,8 @@ To build the operating system, simply run:
 
 - [x] Bootloader
 - [x] Simple Kernel
-- [ ] Get Input from Keyboard
+- [x] Get Input from Keyboard
+- [ ] Add More Keyboard Input like arrow keys
 - [ ] Get Input from Mouse
 - [ ] Create a Shell
 - [ ] Simple snake game
