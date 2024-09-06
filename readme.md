@@ -33,7 +33,7 @@ To build the operating system, simply run:
 - [x] Get Input from Keyboard
 - [ ] Add More Keyboard Input like arrow keys
 - [ ] Get Input from Mouse
-- [ ] Create a Shell
+- [x] Create a Shell
 - [ ] Simple snake game
 - [ ] Storage
 - [ ] Abood file system

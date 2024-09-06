@@ -6,6 +6,7 @@
 #include "utils/irq.h"
 #include "utils/timer.h"
 #include "utils/util.h"
+#include "shell/shell.h"
 
 #define FPS 30
 
@@ -16,22 +17,13 @@ void kernel_main(void) {
 	terminal_initialize();
 	timer_init();
     keyboard_init();
+	shell_initialize();
 
-char* AboodOS = "\n"
-"     _    _                     _    ___  ____  \n"
-"    / \\  | |__   ___   ___   __| |  / _ \\/ ___| \n"
-"   / _ \\ | '_ \\ / _ \\ / _ \\ / _` | | | | \\___ \\ \n"
-"  / ___ \\| |_) | (_) | (_) | (_| | | |_| |___) |\n"
-" /_/   \\_\\_.__/ \\___/ \\___/ \\__,_|  \\___/|____/ \n"
-"\n"
-"By abdallahdev\n"
-"Version 0.0.1\n"
-"\n";
+
                                           
 
-	terminal_writestring(AboodOS);
-	terminal_writestring("We got Abood OS before gta6\n");
-	terminal_writestring("");
+	// terminal_writestring(AboodOS);
+	// terminal_writestring("We got Abood OS before gta6\n");
 
 
     unsigned int last_frame = 0, last = 0, last_key_press = 0;
@@ -63,17 +55,12 @@ char* AboodOS = "\n"
 			for (int i = 0; i < 128; i++) {
 				if (LastKeys[i] != Keys[i]) {
 					if (Keys[i]) {
-						// DEBUGGING
-						// char snum[5];
-						// itoa(i, snum, 10);
-						// terminal_writestring(snum);
-
 						if (i == 0) continue;
 
 						if ((char) i == KEY_BACKSPACE) {
-							terminal_backspace();
+							user_input('\b');
 						}else if ((char) i == KEY_ENTER) {
-							terminal_writestring("\n");
+							user_input('\n');
 						}else {
 							bool Shift = keyboard.mods & KEY_MOD_SHIFT;
 							char c = (char) i;
@@ -81,7 +68,7 @@ char* AboodOS = "\n"
 							if (Shift)
 								c = shift_char(c);
 							
-							terminal_putchar(c);
+							user_input(c);
 						}
 					}
 				}
