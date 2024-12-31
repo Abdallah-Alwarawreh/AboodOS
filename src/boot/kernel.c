@@ -7,6 +7,7 @@
 #include "utils/timer.h"
 #include "utils/util.h"
 #include "shell/shell.h"
+#include "mouse.h"
 
 #define FPS 30
 
@@ -17,6 +18,7 @@ void kernel_main(void) {
 	terminal_initialize();
 	timer_init();
     keyboard_init();
+    mouse_init();
 	shell_initialize();
 
 

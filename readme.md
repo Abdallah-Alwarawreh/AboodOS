@@ -32,7 +32,7 @@ To build the operating system, simply run:
 - [x] Simple Kernel
 - [x] Get Input from Keyboard
 - [ ] Add More Keyboard Input like arrow keys
-- [ ] Get Input from Mouse
+- [x] Get Input from Mouse
 - [x] Create a Shell
 - [ ] Simple snake game
 - [ ] Storage
